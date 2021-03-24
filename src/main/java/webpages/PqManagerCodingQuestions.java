@@ -66,6 +66,7 @@ public class PqManagerCodingQuestions {
 
     public static void main(String[] args) {
 
+        /* put the correct path to selenium chrome driver for your machine */
         System.setProperty("webdriver.chrome.driver", "C:/Selenium/Drivers/chromedriver2.exe");
         WebDriver driver = new ChromeDriver();
         PqManagerCodingQuestions pqManagerCodingQuestions = new PqManagerCodingQuestions(driver);

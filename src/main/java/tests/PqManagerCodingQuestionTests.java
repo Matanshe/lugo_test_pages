@@ -2,11 +2,14 @@ package tests;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import webpages.PqManagerCodingQuestions;
+
 
 public class PqManagerCodingQuestionTests {
 
@@ -16,7 +19,11 @@ public class PqManagerCodingQuestionTests {
     @BeforeTest
     public void setDriver() {
         System.setProperty("webdriver.chrome.driver", "C:/Selenium/Drivers/chromedriver2.exe");
-        driver = new ChromeDriver();
+
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless");
+        WebDriver driver = new ChromeDriver(options);
+
         pqManagerCodingQuestions = new PqManagerCodingQuestions(driver);
         driver.manage().window().maximize();
     }
@@ -28,11 +35,14 @@ public class PqManagerCodingQuestionTests {
         String test = "aaa";
         String test1 = pqManagerCodingQuestions.getQuestionBody();
         Assert.assertEquals(test, test1);
+        Reporter.log("this is a good test re");
+
     }
 
     @Test
     public void badTest(){
-        Assert.assertEquals(1,2);
+        Reporter.log("this is a bad test example");
+        Assert.assertEquals(2,1);
     }
 
 
