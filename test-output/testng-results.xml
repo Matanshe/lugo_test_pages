@@ -8,23 +8,23 @@
       <![CDATA[this is a good test re]]>
     </line>
   </reporter-output>
-  <suite name="Command line suite" duration-ms="4276" started-at="2021-03-30T11:00:50 IDT" finished-at="2021-03-30T11:00:54 IDT">
+  <suite name="Command line suite" duration-ms="4769" started-at="2021-03-30T11:18:36 IDT" finished-at="2021-03-30T11:18:41 IDT">
     <groups>
     </groups>
-    <test name="Command line test" duration-ms="4276" started-at="2021-03-30T11:00:50 IDT" finished-at="2021-03-30T11:00:54 IDT">
+    <test name="Command line test" duration-ms="4769" started-at="2021-03-30T11:18:36 IDT" finished-at="2021-03-30T11:18:41 IDT">
       <class name="tests.PqManagerCodingQuestionCSharpTests">
-        <test-method status="PASS" signature="setDriver()[pri:0, instance:tests.PqManagerCodingQuestionCSharpTests@dbf2bad]" name="setDriver" is-config="true" duration-ms="2800" started-at="2021-03-30T11:00:50 IDT" finished-at="2021-03-30T11:00:53 IDT">
+        <test-method status="PASS" signature="setDriver()[pri:0, instance:tests.PqManagerCodingQuestionCSharpTests@425879b2]" name="setDriver" is-config="true" duration-ms="3195" started-at="2021-03-30T11:18:36 IDT" finished-at="2021-03-30T11:18:39 IDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setDriver -->
-        <test-method status="PASS" signature="javaInt()[pri:0, instance:tests.PqManagerCodingQuestionCSharpTests@dbf2bad]" name="javaInt" duration-ms="883" started-at="2021-03-30T11:00:53 IDT" finished-at="2021-03-30T11:00:54 IDT">
+        <test-method status="PASS" signature="cSharpInt()[pri:0, instance:tests.PqManagerCodingQuestionCSharpTests@425879b2]" name="cSharpInt" duration-ms="978" started-at="2021-03-30T11:18:39 IDT" finished-at="2021-03-30T11:18:40 IDT">
           <reporter-output>
             <line>
               <![CDATA[this is a good test re]]>
             </line>
           </reporter-output>
-        </test-method> <!-- javaInt -->
-        <test-method status="PASS" signature="quitDriver()[pri:0, instance:tests.PqManagerCodingQuestionCSharpTests@dbf2bad]" name="quitDriver" is-config="true" duration-ms="593" started-at="2021-03-30T11:00:54 IDT" finished-at="2021-03-30T11:00:54 IDT">
+        </test-method> <!-- cSharpInt -->
+        <test-method status="PASS" signature="quitDriver()[pri:0, instance:tests.PqManagerCodingQuestionCSharpTests@425879b2]" name="quitDriver" is-config="true" duration-ms="595" started-at="2021-03-30T11:18:40 IDT" finished-at="2021-03-30T11:18:41 IDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitDriver -->

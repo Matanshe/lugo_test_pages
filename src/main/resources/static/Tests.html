@@ -36,7 +36,9 @@
             <div id="collapseOne" class="accordion-collapse collapse " aria-labelledby="headingOne"
                  data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                    <button class="btn btn-primary" type="submit" onclick="runOneTest(1)"> run tests</button>
+                    <button class="btn btn-primary" type="submit" onclick="runOneTest(1)"> run test java int</button>
+                    <button class="btn btn-primary" type="submit" onclick="runOneTest(2)"> run test c# int</button>
+
                 </div>
             </div>
         </div>
@@ -96,10 +98,10 @@
     }
 
     async function runAllTests() {
-
         fetch("/NumOfTests")
             .then(data => data.json())
             .then((numOfTests) => {
+                $('#testsList').html("<div>" + "0" + "/" + numOfTests + "completed</div>")
                 const tests = Array.from(new Array(numOfTests), (x,i) => i+1);
                 const runtests = function(tests) {
                     return tests.reduce((p, test) =>{
