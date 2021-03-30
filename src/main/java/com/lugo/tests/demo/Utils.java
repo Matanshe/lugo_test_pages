@@ -3,7 +3,8 @@ package com.lugo.tests.demo;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import webpages.PqManagerCodingQuestions;
+
+/*IF CAN ADD HERE MORE DRIVERS FOR DIFFERENT BROWSERS */
 
 public class Utils {
 
@@ -12,7 +13,7 @@ public class Utils {
         System.setProperty("webdriver.chrome.driver", "C:/Selenium/Drivers/chromedriver2.exe");
 
         ChromeOptions options = new ChromeOptions();
-//        options.addArguments("--headless");
+        options.addArguments("--headless");
         WebDriver driver = new ChromeDriver(options);
 
         driver.manage().window().maximize();

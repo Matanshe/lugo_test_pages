@@ -67,6 +67,7 @@
 
     let testList = [];
 
+
     async function runTest(test) {
         $('#spinner').show();
         const fetchPromise = fetch("/RunTests", {
@@ -102,8 +103,11 @@
             .then(data => data.json())
             .then((numOfTests) => {
                 $('#testsList').html("<div>" + "0" + "/" + numOfTests + "completed</div>")
+                // build an array of numbers based on the given test number
                 const tests = Array.from(new Array(numOfTests), (x,i) => i+1);
-                const runtests = function(tests) {
+                // runs the series of tests async, waiting for a test to be completed before calling the next one.
+                const runTestsSeries = function(tests) {
+                    // going over all the tests array, on each element calls a promise that calls the runTest, only when the promise returns the next call will happen
                     return tests.reduce((p, test) =>{
                         return p.then(() => runTest(test)
                             .then(() => $('#testsList').html("<div>" + test + "/" + numOfTests + "completed</div>"))
@@ -114,7 +118,7 @@
                         )
                     },Promise.resolve())
                 }
-                runtests(tests);
+                runTestsSeries(tests);
             })
     }
 

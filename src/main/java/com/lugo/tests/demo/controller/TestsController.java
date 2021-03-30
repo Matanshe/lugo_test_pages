@@ -22,6 +22,9 @@ public class TestsController {
 
         TestListenerAdapter tla = new TestListenerAdapter();
         TestNG testng = new TestNG();
+        /*
+        *  IMPORTANT - YOU NEED TO ADD A CASE HERE FOR EACH TEST THAT YOU HAVE
+        * */
         switch (testId) {
             case "1":
                 testng.setTestClasses(new Class[]{PqManagerCodingQuestionJavaTests.class});
@@ -34,7 +37,9 @@ public class TestsController {
         testng.addListener(tla);
         testng.run();
 
-        List<TestRes> data = new ArrayList<TestRes>();
+
+        // makes a list of all the tests and their results
+        List<TestRes> data = new ArrayList<>();
         List<ITestResult> passedTests = tla.getPassedTests();
         for (ITestResult result: passedTests) {
             TestRes testRes = new TestRes();
@@ -55,7 +60,7 @@ public class TestsController {
             data.add(testRes);
         }
 
-        System.out.printf(tla.getFailedTests().toString());
+        System.out.print(tla.getFailedTests().toString());
 
 
         return data;
@@ -65,6 +70,9 @@ public class TestsController {
     public int getNumOfTests(){
 
         TestList list = new TestList();
+        /*
+        * IMPORTANT THIS IS JUST A MOCK, YOU SHOULD CONNECT TO A DB THAT WILL SAVE ALL THE TESTS
+        *  */
         list.setNumOfTests(2); // this is just a mock
 
         return list.getNumOfTests();

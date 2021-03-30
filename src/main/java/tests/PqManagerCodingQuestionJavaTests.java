@@ -1,5 +1,10 @@
 package tests;
 
+/*
+* STILL NEEDS TO BE ADDED: VALIDATION THAT THE QUESTION THAT WAS ADDED IS OK (CHECK THAT THE CODE IS AS EXPECTED)
+ */
+
+
 import com.lugo.tests.demo.Utils;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;

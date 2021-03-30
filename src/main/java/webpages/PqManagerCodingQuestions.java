@@ -4,19 +4,19 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.time.Duration;
 import java.util.List;
 
+
+/*
+*
+*  THIS CLASS FOR CONTROLLING THE PQMANAGER CODING QUESTIONS PART
+*
+*
+ */
 public class PqManagerCodingQuestions {
-
-
-    private final int JAVA = 0;
-
 
     //Page URL
     private static final String companyKey = "aglub19hcHBfaWRyFAsSB0NvbXBhbnkYgICAgICAw";
