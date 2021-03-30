@@ -3,13 +3,13 @@
 <suite name="Failed suite [Command line suite]">
   <test thread-count="5" name="Command line test(failed)">
     <classes>
-      <class name="tests.PqManagerCodingQuestionJavaTests">
+      <class name="tests.PqManagerCodingQuestionCSharpTests">
         <methods>
-          <include name="javaInt"/>
+          <include name="badTest"/>
           <include name="quitDriver"/>
           <include name="setDriver"/>
         </methods>
-      </class> <!-- tests.PqManagerCodingQuestionJavaTests -->
+      </class> <!-- tests.PqManagerCodingQuestionCSharpTests -->
     </classes>
   </test> <!-- Command line test(failed) -->
 </suite> <!-- Failed suite [Command line suite] -->

@@ -14,6 +14,10 @@ import java.util.List;
 
 public class PqManagerCodingQuestions {
 
+
+    private final int JAVA = 0;
+
+
     //Page URL
     private static final String companyKey = "aglub19hcHBfaWRyFAsSB0NvbXBhbnkYgICAgICAw";
     private static final String PAGE_URL = "http://localhost:8080/pqmanager.htm?orgId=" + companyKey + "&orgName=testCompany";
@@ -184,12 +188,7 @@ public class PqManagerCodingQuestions {
 
     public void selectLang(String lang) {
         Select programmingLang = new Select(driver.findElement(selectProgramingLang));
-        List<WebElement> programmingLangList = programmingLang.getOptions();
-        WebElement chooseLang = driver.findElement(selectProgramingLang);
-        programmingLang.selectByIndex(0);
-//        driver.findElement(selectProgramingLang).click();
-//
-//        new Select(driver.findElement(selectProgramingLang)).selectByVisibleText(lang);
+        programmingLang.selectByVisibleText(lang);
     }
 
     public void selectDifficulty(int index) {

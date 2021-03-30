@@ -36,6 +36,7 @@ public class PqManagerCodingQuestionCSharpTests extends Tests {
 
     @Test
     public void badTest(){
+        Reporter.log("failed test log");
         Assert.fail("this is example of a test that failed");
     }
 

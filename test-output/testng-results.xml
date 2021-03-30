@@ -7,31 +7,28 @@
     <line>
       <![CDATA[this question was added]]>
     </line>
-    <line>
-      <![CDATA[this is a good test re]]>
-    </line>
   </reporter-output>
-  <suite name="Command line suite" duration-ms="5760" started-at="2021-03-30T12:47:25 IDT" finished-at="2021-03-30T12:47:31 IDT">
+  <suite name="Command line suite" duration-ms="15840" started-at="2021-03-30T12:53:16 IDT" finished-at="2021-03-30T12:53:32 IDT">
     <groups>
     </groups>
-    <test name="Command line test" duration-ms="5760" started-at="2021-03-30T12:47:25 IDT" finished-at="2021-03-30T12:47:31 IDT">
-      <class name="tests.PqManagerCodingQuestionCSharpTests">
-        <test-method status="PASS" signature="setDriver()[pri:0, instance:tests.PqManagerCodingQuestionCSharpTests@335c21c3]" name="setDriver" is-config="true" duration-ms="3880" started-at="2021-03-30T12:47:25 IDT" finished-at="2021-03-30T12:47:29 IDT">
+    <test name="Command line test" duration-ms="15840" started-at="2021-03-30T12:53:16 IDT" finished-at="2021-03-30T12:53:32 IDT">
+      <class name="tests.PqManagerCodingQuestionJavaTests">
+        <test-method status="PASS" signature="setDriver()[pri:0, instance:tests.PqManagerCodingQuestionJavaTests@6f4b01e]" name="setDriver" is-config="true" duration-ms="3509" started-at="2021-03-30T12:53:16 IDT" finished-at="2021-03-30T12:53:19 IDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setDriver -->
-        <test-method status="PASS" signature="cSharpInt()[pri:0, instance:tests.PqManagerCodingQuestionCSharpTests@335c21c3]" name="cSharpInt" duration-ms="1103" started-at="2021-03-30T12:47:29 IDT" finished-at="2021-03-30T12:47:30 IDT">
+        <test-method status="PASS" signature="javaInt()[pri:0, instance:tests.PqManagerCodingQuestionJavaTests@6f4b01e]" name="javaInt" duration-ms="11606" started-at="2021-03-30T12:53:19 IDT" finished-at="2021-03-30T12:53:31 IDT">
           <reporter-output>
             <line>
-              <![CDATA[this is a good test re]]>
+              <![CDATA[this question was added]]>
             </line>
           </reporter-output>
-        </test-method> <!-- cSharpInt -->
-        <test-method status="PASS" signature="quitDriver()[pri:0, instance:tests.PqManagerCodingQuestionCSharpTests@335c21c3]" name="quitDriver" is-config="true" duration-ms="774" started-at="2021-03-30T12:47:30 IDT" finished-at="2021-03-30T12:47:31 IDT">
+        </test-method> <!-- javaInt -->
+        <test-method status="PASS" signature="quitDriver()[pri:0, instance:tests.PqManagerCodingQuestionJavaTests@6f4b01e]" name="quitDriver" is-config="true" duration-ms="723" started-at="2021-03-30T12:53:31 IDT" finished-at="2021-03-30T12:53:32 IDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitDriver -->
-      </class> <!-- tests.PqManagerCodingQuestionCSharpTests -->
+      </class> <!-- tests.PqManagerCodingQuestionJavaTests -->
     </test> <!-- Command line test -->
   </suite> <!-- Command line suite -->
 </testng-results>
