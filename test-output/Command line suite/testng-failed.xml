@@ -5,9 +5,9 @@
     <classes>
       <class name="tests.PqManagerCodingQuestionJavaTests">
         <methods>
-          <include name="setDriver"/>
-          <include name="badTest"/>
+          <include name="javaInt"/>
           <include name="quitDriver"/>
+          <include name="setDriver"/>
         </methods>
       </class> <!-- tests.PqManagerCodingQuestionJavaTests -->
     </classes>

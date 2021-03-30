@@ -53,6 +53,7 @@ public class PqManagerCodingQuestions {
     By candidateSourceEditor = By.id("candidateSourceEditor");
     By testCaseCheckerEditor = By.id("testCaseCheckerEditor");
     By normalMode = By.id("normalModeBtn");
+    By saveQuestion = By.id("addCodingQuestionAction");
 
 
 
@@ -77,9 +78,17 @@ public class PqManagerCodingQuestions {
         pqManagerCodingQuestions.questionBody("aaa");
     }
 
-    void waitForModal(By by) {
-        WebElement firstResult = new WebDriverWait(driver, 3)
+    public void addQuestion(){
+        driver.findElement(saveQuestion).click();
+    }
+
+    public void waitForModal(By by) {
+        WebElement waitToModal = new WebDriverWait(driver, 3)
                 .until(ExpectedConditions.elementToBeClickable(by));
+    }
+
+    public void checkIfMainPage(){
+        waitForModal(codingQuestion);
     }
 
     public void changeToNormalMode(){
@@ -141,9 +150,9 @@ public class PqManagerCodingQuestions {
         }
         driver.findElement(testCaseRes).click();
         if (driver.findElement(testCaseInput).isDisplayed()) {
-            driver.findElement(testCaseInput).sendKeys(args.get(size).toString());
+            driver.findElement(testCaseInput).sendKeys(args.get(size-1).toString());
             driver.findElement(addTestCaseInput).click();
-        } else driver.findElement(testCaseVar1).sendKeys(args.get(size).toString());
+        } else driver.findElement(testCaseRes).sendKeys(args.get(size-1).toString());
         driver.findElement(addTestCase).click();
 
     }
@@ -174,7 +183,13 @@ public class PqManagerCodingQuestions {
     }
 
     public void selectLang(String lang) {
-        new Select(driver.findElement(selectProgramingLang)).selectByVisibleText(lang);
+        Select programmingLang = new Select(driver.findElement(selectProgramingLang));
+        List<WebElement> programmingLangList = programmingLang.getOptions();
+        WebElement chooseLang = driver.findElement(selectProgramingLang);
+        programmingLang.selectByIndex(0);
+//        driver.findElement(selectProgramingLang).click();
+//
+//        new Select(driver.findElement(selectProgramingLang)).selectByVisibleText(lang);
     }
 
     public void selectDifficulty(int index) {
@@ -185,20 +200,23 @@ public class PqManagerCodingQuestions {
         driver.findElement(codingQuestion).click();
     }
 
-    void addNewTopic(String topicName) {
+    public void addNewTopic(String topicName) {
+        waitForModal(manageTopics);
         driver.findElement(manageTopics).click();
+        waitForModal(saveNewTopic);
         driver.findElement(newTopicName).sendKeys(topicName);
         driver.findElement(saveNewTopic).click();
+        waitForModal(codingQuestion);
     }
 
-    void editTopic(String oldTopic, String newTopic) {
+    public void editTopic(String oldTopic, String newTopic) {
         driver.findElement(manageTopics);
         new Select(driver.findElement(topicToEdit)).selectByVisibleText(oldTopic);
         driver.findElement(topicEditNewName).sendKeys(newTopic);
         driver.findElement(saveEditedTopic);
     }
 
-    void deleteTopic(String topicName) {
+    public void deleteTopic(String topicName) {
         driver.findElement(manageTopics);
         new Select(driver.findElement(topicToDelete)).selectByVisibleText(topicName);
         driver.findElement(deleteTopic).click();

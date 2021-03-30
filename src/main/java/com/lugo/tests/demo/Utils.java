@@ -12,7 +12,7 @@ public class Utils {
         System.setProperty("webdriver.chrome.driver", "C:/Selenium/Drivers/chromedriver2.exe");
 
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless");
+//        options.addArguments("--headless");
         WebDriver driver = new ChromeDriver(options);
 
         driver.manage().window().maximize();

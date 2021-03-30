@@ -9,6 +9,10 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import webpages.PqManagerCodingQuestions;
 
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
 
 public class PqManagerCodingQuestionJavaTests extends Tests {
 
@@ -26,12 +30,30 @@ public class PqManagerCodingQuestionJavaTests extends Tests {
 
     @Test
     public void javaInt() {
-        pqManagerCodingQuestions.openCodingQuestionsModal();
-        pqManagerCodingQuestions.questionBody("aaa");
-        String test = "aaa";
-        String test1 = pqManagerCodingQuestions.getQuestionBody();
-        Assert.assertEquals(test, test1);
-        Reporter.log("this is a good test re");
+
+        try {
+            pqManagerCodingQuestions.openCodingQuestionsModal();
+            pqManagerCodingQuestions.addNewTopic("javaInt"+ new Date().toString());
+            pqManagerCodingQuestions.selectLang("Java");
+            pqManagerCodingQuestions.functionName("foo");
+            pqManagerCodingQuestions.questionBody("questionBody");
+            pqManagerCodingQuestions.addVar("var1", "int");
+            for (int i = 0; i < 3; i++) {
+                List <Integer> testCaseList = new ArrayList<>();
+                testCaseList.add(i);
+                testCaseList.add(i);
+                pqManagerCodingQuestions.addTestCase(testCaseList);
+            }
+            pqManagerCodingQuestions.addQuestion();
+
+            pqManagerCodingQuestions.checkIfMainPage();
+            Reporter.log("this question was added");
+        } catch (Exception e) {
+            e.printStackTrace();
+            Reporter.log(e.getMessage());
+            Assert.fail();
+        }
+
 
     }
 

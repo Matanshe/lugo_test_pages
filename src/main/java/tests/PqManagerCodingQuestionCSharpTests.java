@@ -1,5 +1,6 @@
 package tests;
-
+/* THIS IS NOT A REAL TEST
+* THIS TEST NEEDS TO BE IMPLEMENTED */
 import com.lugo.tests.demo.Utils;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
@@ -30,7 +31,12 @@ public class PqManagerCodingQuestionCSharpTests extends Tests {
         String test = "aaa";
         String test1 = pqManagerCodingQuestions.getQuestionBody();
         Assert.assertEquals(test, test1);
-        Reporter.log("this is a good test re");
+        Reporter.log("this is not a real test a real test needs to be implemented");
+    }
+
+    @Test
+    public void badTest(){
+        Assert.fail("this is example of a test that failed");
     }
 
 
