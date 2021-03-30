@@ -24,7 +24,7 @@ public class PqManagerCodingQuestionCSharpTests extends Tests {
     }
 
     @Test
-    public void javaInt() {
+    public void cSharpInt() {
         pqManagerCodingQuestions.openCodingQuestionsModal();
         pqManagerCodingQuestions.questionBody("aaa");
         String test = "aaa";
