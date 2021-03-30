@@ -1,13 +1,13 @@
 package com.lugo.tests.demo.controller;
 
+import com.lugo.tests.demo.TestList;
 import com.lugo.tests.demo.TestRes;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.testng.ITestResult;
 import org.testng.TestListenerAdapter;
 import org.testng.TestNG;
-import tests.PqManagerCodingQuestionTests;
+import tests.PqManagerCodingQuestionCSharpTests;
+import tests.PqManagerCodingQuestionJavaTests;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -18,11 +18,19 @@ import java.util.List;
 public class TestsController {
 
     @PostMapping("/RunTests")
-    public List<TestRes> runTests(HttpServletRequest request, HttpServletResponse response, @RequestParam String test){
+    public List<TestRes> runTests(HttpServletRequest request, HttpServletResponse response, @RequestBody String testId){
 
         TestListenerAdapter tla = new TestListenerAdapter();
         TestNG testng = new TestNG();
-        testng.setTestClasses(new Class[]{PqManagerCodingQuestionTests.class});
+        switch (testId) {
+            case "1":
+                testng.setTestClasses(new Class[]{PqManagerCodingQuestionJavaTests.class});
+                break;
+            case "2":
+                testng.setTestClasses(new Class[]{PqManagerCodingQuestionCSharpTests.class});
+                break;
+        }
+
         testng.addListener(tla);
         testng.run();
 
@@ -51,6 +59,15 @@ public class TestsController {
 
 
         return data;
+    }
+
+    @GetMapping("/NumOfTests")
+    public int getNumOfTests(){
+
+        TestList list = new TestList();
+        list.setNumOfTests(2); // this is just a mock
+
+        return list.getNumOfTests();
     }
 
     public String getLog(String str){
