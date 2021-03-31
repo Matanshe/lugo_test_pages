@@ -1,15 +1,13 @@
-package com.lugo.tests.demo;
-
-import tests.Tests;
+package com.lugo.tests.demo.entities;
 
 import java.util.List;
 
-public class TestList {
+public class TestsList {
 
     int numOfTests;
-    List<Tests> testsList;
+    List<Test> testsList;
 
-    public TestList() {
+    public TestsList() {
     }
 
     public int getNumOfTests() {
@@ -20,11 +18,11 @@ public class TestList {
         this.numOfTests = numOfTests;
     }
 
-    public List<Tests> getTestsList() {
+    public List<Test> getTestsList() {
         return testsList;
     }
 
-    public void setTestsList(List<Tests> testsList) {
+    public void setTestsList(List<Test> testsList) {
         this.testsList = testsList;
     }
 }

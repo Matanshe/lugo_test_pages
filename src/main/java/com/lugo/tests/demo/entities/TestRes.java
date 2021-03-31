@@ -1,4 +1,4 @@
-package com.lugo.tests.demo;
+package com.lugo.tests.demo.entities;
 
 public class TestRes {
 

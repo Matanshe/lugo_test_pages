@@ -13,16 +13,15 @@ package tests;
 *
 *
 *  */
-import com.lugo.tests.demo.Utils;
+import com.lugo.tests.demo.entities.Test;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
 import webpages.PqManagerCodingQuestions;
 
-public class PqManagerCodingQuestionCSharpTests extends Tests {
+public class PqManagerCodingQuestionCSharpTests extends Test {
 
     PqManagerCodingQuestions pqManagerCodingQuestions;
     WebDriver driver;
@@ -31,12 +30,12 @@ public class PqManagerCodingQuestionCSharpTests extends Tests {
     @BeforeTest
     public void setDriver() {
         Utils utils = new Utils();
-        driver = utils.setUpDriver();
+        driver = utils.chromeDriverSetUp();
         pqManagerCodingQuestions = new PqManagerCodingQuestions(driver);
 
     }
 
-    @Test
+    @org.testng.annotations.Test
     public void cSharpInt() {
         pqManagerCodingQuestions.openCodingQuestionsModal();
         pqManagerCodingQuestions.questionBody("aaa");
@@ -46,7 +45,7 @@ public class PqManagerCodingQuestionCSharpTests extends Tests {
         Reporter.log("this is not a real test a real test needs to be implemented");
     }
 
-    @Test
+    @org.testng.annotations.Test
     public void badTest(){
         Reporter.log("failed test log");
         Assert.fail("this is example of a test that failed");

@@ -1,7 +1,7 @@
 package com.lugo.tests.demo.controller;
 
-import com.lugo.tests.demo.TestList;
-import com.lugo.tests.demo.TestRes;
+import com.lugo.tests.demo.entities.TestsList;
+import com.lugo.tests.demo.entities.TestRes;
 import org.springframework.web.bind.annotation.*;
 import org.testng.ITestResult;
 import org.testng.TestListenerAdapter;
@@ -69,7 +69,7 @@ public class TestsController {
     @GetMapping("/NumOfTests")
     public int getNumOfTests(){
 
-        TestList list = new TestList();
+        TestsList list = new TestsList();
         /*
         * IMPORTANT THIS IS JUST A MOCK, YOU SHOULD CONNECT TO A DB THAT WILL SAVE ALL THE TESTS
         *  */

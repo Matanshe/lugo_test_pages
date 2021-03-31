@@ -1,12 +1,12 @@
-package tests;
+package com.lugo.tests.demo.entities;
 
-public class Tests {
+public class Test {
     int testId;
 
-    public Tests() {
+    public Test() {
     }
 
-    public Tests(int testId) {
+    public Test(int testId) {
         this.testId = testId;
     }
 
