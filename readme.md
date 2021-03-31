@@ -1,6 +1,6 @@
 # **Lugo Test auto test app**
 
-## **Install**
+## **Install and Run**
 First, make sure you have the latest chrome driver installed on your machine, and put the correct path to on the Utils class.
 
 build the project using `mvn package`, and run it with `mvn spring-boot:run`.
